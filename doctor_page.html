@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/red-cross.png">
+    <title>City Hospital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="image/logo.jpg" id="doct" alt="">
+            <h1 id="H-name">CITY HOSPITAL </h1>
+        </div>
+        <h1>Find a Doctor</h1>
+        <div class="search-container">
+            <select id="locationSelect">
+                <option value="">Select Location</option>
+                <option value="Main Building">Main Building</option>
+                <option value="North Wing">North Wing</option>
+                <option value="South Wing">South Wing</option>
+                <option value="Emergency Department">Emergency Department</option>
+            </select>
+            <select id="specializationSelect">
+                <option value="">Select Specialization</option>
+                <option value="Cardiologist">Cardiologist</option>
+                <option value="Dermatologist">Dermatologist</option>
+                <option value="Pediatrician">Pediatrician</option>
+                <option value="Psychiatrist">Psychiatrist</option>
+            </select>
+            <button onclick="searchDoctors()">Search</button>
+        </div>
+        <ul id="doctorList">
+            <!-- Doctor list will be displayed here -->
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

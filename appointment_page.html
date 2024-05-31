@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="image/red-cross.png">
+<title>Doctor Appointment Scheduler</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    width: 100%; /* Ensure the form fills the container */
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="submit"] {
+    width: calc(100% - 22px); /* Adjust for border and padding */
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.date-time-inputs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.date-input,
+.time-input {
+    width: 48%; /* Adjust for two inputs */
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Schedule Appointment</h2>
+    <form id="appointmentForm">
+        <label for="patientName">Patient Name</label>
+        <input type="text" id="patientName" name="patientName" required>
+        
+        <!-- New input box for describing the problem -->
+        <label for="problemDescription">Problem Description</label>
+        <input type="text" id="problemDescription" name="problemDescription" required>
+        <!-- End of new input box -->
+        
+        <div class="date-time-inputs">
+            <div class="date-input">
+                <label for="appointmentDate">Date</label>
+                <input type="date" id="appointmentDate" name="appointmentDate" required>
+            </div>
+            <div class="time-input">
+                <label for="appointmentTime">Time</label>
+                <input type="time" id="appointmentTime" name="appointmentTime" required>
+            </div>
+        </div>
+        <input type="submit" value="Schedule Appointment">
+    </form>
+</div>
+<script>
+    document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Get form data
+        var patientName = document.getElementById('patientName').value;
+        var problemDescription = document.getElementById('problemDescription').value;
+        var appointmentDate = document.getElementById('appointmentDate').value;
+        var appointmentTime = document.getElementById('appointmentTime').value;
+        // Combine date and time
+        var appointmentDateTime = appointmentDate + ' ' + appointmentTime;
+        // You can send this data to the server for further processing like saving to a database
+        console.log("Patient Name:", patientName);
+        console.log("Problem Description:", problemDescription);
+        console.log("Appointment Date:", appointmentDate);
+        console.log("Appointment Time:", appointmentTime);
+        console.log("Appointment Date & Time:", appointmentDateTime);
+        // For demonstration purposes, we'll just show an alert
+        alert("Appointment Scheduled Successfully!");
+        // Clear form fields
+        document.getElementById('appointmentForm').reset();
+    });
+</script>
+</body>
+</html>

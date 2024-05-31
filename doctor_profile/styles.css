@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.name {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.specialization {
+    font-size: 18px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 16px;
+    color: #555;
+}
+
+
+/* CSS for doctor experience and years of service */
+.experience {
+    margin-top: 20px;
+}
+
+.experience p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.appointment-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.appointment-btn button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.appointment-btn button:hover {
+    background-color: #0056b3;
+}
